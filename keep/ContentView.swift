@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var fullText: String = "This is some editable text..."
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+          NavigationView {
+              List {
+                  ForEach(0..<8) { _ in
+                      AsyncImage(
+                              url: URL(
+                                string: "https://picsum.photos/600"
+                                )) { image in
+                          image
+                              .resizable()
+                              .scaledToFill()
+                              .frame(height: 240)
+                      } placeholder: {
+                          ZStack {
+                              RoundedRectangle(cornerRadius: 12)
+                                  .fill(.gray.opacity(0.6))
+                                  .frame(height: 240)
+                              ProgressView()
+                          }
+                      }
+                      .aspectRatio(3 / 2, contentMode: .fill)
+                      .cornerRadius(12)
+                      .padding(.vertical)
+                      .shadow(radius: 4)
+                    }
+                  }
+                  .listStyle(.inset)
+                  .navigationTitle("Home")
+              TextEditor(text: $fullText).padding(10)
+          }
     }
 }
 

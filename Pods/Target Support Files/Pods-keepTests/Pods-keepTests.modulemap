@@ -1,0 +1,6 @@
+framework module Pods_keepTests {
+  umbrella header "Pods-keepTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
