@@ -1,24 +1,40 @@
 PODS:
+  - AppAuth (1.6.2):
+    - AppAuth/Core (= 1.6.2)
+    - AppAuth/ExternalUserAgent (= 1.6.2)
   - AppAuth/Core (1.6.2)
+  - AppAuth/ExternalUserAgent (1.6.2):
+    - AppAuth/Core
+  - GoogleAPIClientForREST/Core (3.1.0):
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GoogleAPIClientForREST/Keep (3.1.0):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
   - GTMAppAuth (4.0.0):
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
   - GTMSessionFetcher/Core (3.1.1)
+  - GTMSessionFetcher/Full (3.1.1):
+    - GTMSessionFetcher/Core
 
 DEPENDENCIES:
+  - AppAuth
+  - GoogleAPIClientForREST/Keep
   - GTMAppAuth
 
 SPEC REPOS:
   trunk:
     - AppAuth
+    - GoogleAPIClientForREST
     - GTMAppAuth
     - GTMSessionFetcher
 
 SPEC CHECKSUMS:
   AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
+  GoogleAPIClientForREST: b606c614570575ffccbde27a3ee5e761b169fca4
   GTMAppAuth: c1bce47a2af077d802eee58a9334c96b2ee65623
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
 
-PODFILE CHECKSUM: fbd3f24b443a384edf5f15ec03ffbe9021467a7c
+PODFILE CHECKSUM: 462184712dd76f0f94c6ffccf42e2ddd412fb1d7
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.8.4

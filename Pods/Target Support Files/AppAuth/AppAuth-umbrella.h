@@ -41,6 +41,12 @@
 #import "OIDTokenUtilities.h"
 #import "OIDURLQueryComponent.h"
 #import "OIDURLSessionProvider.h"
+#import "AppAuth.h"
+#import "OIDLoopbackHTTPServer.h"
+#import "OIDAuthorizationService+Mac.h"
+#import "OIDAuthState+Mac.h"
+#import "OIDExternalUserAgentMac.h"
+#import "OIDRedirectHTTPHandler.h"
 
 FOUNDATION_EXPORT double AppAuthVersionNumber;
 FOUNDATION_EXPORT const unsigned char AppAuthVersionString[];

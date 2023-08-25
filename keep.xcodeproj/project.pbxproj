@@ -16,6 +16,8 @@
 		375F89812A97383400A1CFAA /* keepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F89802A97383400A1CFAA /* keepUITestsLaunchTests.swift */; };
 		968F793365A361F45AF9BF62 /* Pods_keep_keepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3213F9F312D79BAA35A6C3 /* Pods_keep_keepUITests.framework */; };
 		A1422DA81532D713E1D6387D /* Pods_keep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6F7AD95092725653C5111E /* Pods_keep.framework */; };
+		B0588FC82A97706D0082160F /* NoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0588FC72A97706D0082160F /* NoteItemView.swift */; };
+		B08938452A97B51D0050C2B5 /* OAuth2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08938442A97B51D0050C2B5 /* OAuth2ViewModel.swift */; };
 		C05BA5B955569812B8AA9C2D /* Pods_keepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9505DE1B3772DD8C1B18B9C /* Pods_keepTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		5471528A336869A4F44E625C /* Pods-keepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keepTests.debug.xcconfig"; path = "Target Support Files/Pods-keepTests/Pods-keepTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A1AAF956B52254980E663DA /* Pods-keepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keepTests.release.xcconfig"; path = "Target Support Files/Pods-keepTests/Pods-keepTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D6F7AD95092725653C5111E /* Pods_keep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0588FC72A97706D0082160F /* NoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemView.swift; sourceTree = "<group>"; };
+		B08938442A97B51D0050C2B5 /* OAuth2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2ViewModel.swift; sourceTree = "<group>"; };
 		B9505DE1B3772DD8C1B18B9C /* Pods_keepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3213F9F312D79BAA35A6C3 /* Pods_keep_keepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keep_keepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F50CBB66BA73DA20D13545 /* Pods-keep-keepUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keep-keepUITests.release.xcconfig"; path = "Target Support Files/Pods-keep-keepUITests/Pods-keep-keepUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +116,9 @@
 		375F89612A97383200A1CFAA /* keep */ = {
 			isa = PBXGroup;
 			children = (
+				B08938432A97B4C40050C2B5 /* ViewModel */,
+				B0588FC62A97704A0082160F /* View */,
 				375F89622A97383200A1CFAA /* keepApp.swift */,
-				375F89642A97383200A1CFAA /* ContentView.swift */,
 				375F89662A97383400A1CFAA /* Assets.xcassets */,
 				375F896B2A97383400A1CFAA /* keep.entitlements */,
 				375F89682A97383400A1CFAA /* Preview Content */,
@@ -166,8 +171,24 @@
 				5471528A336869A4F44E625C /* Pods-keepTests.debug.xcconfig */,
 				6A1AAF956B52254980E663DA /* Pods-keepTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0588FC62A97704A0082160F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				375F89642A97383200A1CFAA /* ContentView.swift */,
+				B0588FC72A97706D0082160F /* NoteItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B08938432A97B4C40050C2B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B08938442A97B51D0050C2B5 /* OAuth2ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +431,8 @@
 			files = (
 				375F89652A97383200A1CFAA /* ContentView.swift in Sources */,
 				375F89632A97383200A1CFAA /* keepApp.swift in Sources */,
+				B0588FC82A97706D0082160F /* NoteItemView.swift in Sources */,
+				B08938452A97B51D0050C2B5 /* OAuth2ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +600,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.utc.note.keep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,6 +627,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.utc.note.keep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
